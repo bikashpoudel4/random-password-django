@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>THIS IS HOME</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+<div class="container text-center">
+    <h1>PASSWORD GENERATOR</h1>
+    <!--iNSIDE FORM ACTION action="password" password is function name-->
+    <!--path('FUNCTION/', views.FUNCTION),-->
+    <form action="{% url 'password' %}">
+
+        <!-- <select name="length"> length is in the views   -->
+        <select name="length">
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12" selected="selected">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+        </select> Length
+        <br>
+        <br>
+        <!-- <input type="checkbox" name="uppercase"> goes to views.py   -->
+        <input type="checkbox" name="uppercase"> Uppercase
+        <br>
+        <input type="checkbox" name="numbers"> Numbers
+        <br>
+        <input type="checkbox" name="special"> Special Characters
+        <br>
+        <br>
+        <input type="submit" value="Generate Password" class="btn btn-primary">
+    </form>
+    <a href="{% url 'about' %}">About Page</a>
+</div>
+</body>
+</html>
